@@ -8,11 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1> Registration Success</h1>
+  <h1>${Success}</h1>
   <div class="contatiner  text-center" >  
-	  <h1> Name : ${user }</h1>
-	  <h1>Email : ${email }</h1>
-	  <h1>Password: ${password }</h1>
+	  <h1>Name 		: ${user.userName }</h1>
+	  <h1>Email 	: ${user.userEmail }</h1>
+	  <h1>Password  : ${user.userPassword }</h1>
   </div>
 
 </body>
