@@ -1,9 +1,10 @@
 package com.spring.controller;
 
 import java.util.List;
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
+import java.util.Arrays;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,8 +45,12 @@ public class HomeController {
 		modelAndView.addObject("name", "Kishore K Reddy");
 		modelAndView.addObject("id", 1243);
 		LocalDateTime now = LocalDateTime.now();
+		
+		List<Integer> marks = new ArrayList<Integer>(Arrays.asList(80,92, 100, 17627, 26772));
+		modelAndView.addObject("marks", marks);
 		modelAndView.addObject("time", now);
 		modelAndView.setViewName("help");
+		
 		return modelAndView;
 	}
 }
