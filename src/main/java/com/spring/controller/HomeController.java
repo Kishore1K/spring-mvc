@@ -1,12 +1,14 @@
 package com.spring.controller;
 
 import java.util.List;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -32,5 +34,18 @@ public class HomeController {
 	@RequestMapping("/about")
 	public String about() {
 		return "about";
+	}
+	
+	
+	@RequestMapping("/help")
+	public ModelAndView help() {
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("name", "Kishore K Reddy");
+		modelAndView.addObject("id", 1243);
+		LocalDateTime now = LocalDateTime.now();
+		modelAndView.addObject("time", now);
+		modelAndView.setViewName("help");
+		return modelAndView;
 	}
 }
