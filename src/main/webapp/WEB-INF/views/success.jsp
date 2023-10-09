@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>${msg}</h1>
   <h1>${Success}</h1>
   <div class="contatiner  text-center" >  
 	  <h1>Name 		: ${user.userName }</h1>
