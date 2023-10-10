@@ -11,21 +11,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Search Application</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
     <div class="container">
-    	<div class="card mx-auto mt-5 bg-primary" style="width:80%" >
+    	
+    	<div class="card mx-auto mt-5 bg-primary" style="width:50%" >
+    		
     		<div class="card-body" >
-    			<form>
+    			<h1 class="text-center text-light ">My Search</h1>
+    			<form class="mt-5" action="search/submitSearch" >
     				<div class="form-group">
-    					<label class="form-text">Enter the KeyWord to Search</label>
     					<input type="text"  name="text" class="form-control" placeholder="Enter the KeyWord"/>
     				
     				</div>
     				<div class="container text-center">
-    					  <button class="btn btn-outline-lite">Search</button>
+    					  <button class="btn btn-outline-light">Search</button>
     					
     				</div>
     			</form>
