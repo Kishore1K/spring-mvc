@@ -20,7 +20,7 @@
     		
     		<div class="card-body" >
     			<h1 class="text-center text-light ">My Search</h1>
-    			<form class="mt-5" action="search/submitSearch" >
+    			<form class="mt-5" action="submitSearch" >
     				<div class="form-group">
     					<input type="text"  name="text" class="form-control" placeholder="Enter the KeyWord"/>
     				
