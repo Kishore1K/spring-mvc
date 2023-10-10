@@ -2,6 +2,7 @@ package com.spring.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.taglibs.standard.tag.common.xml.IfTag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -67,11 +68,28 @@ public class ContactController {
 	@RequestMapping(path = "/submitForm", method= RequestMethod.POST)
 	public String handleForm2(@ModelAttribute User user, Model model) {
 //		model.addAttribute("Header", "Signup Success");
-		int v = this.uService.createUser(user);
-		model.addAttribute("msg", "User Created and The ID is "+v);
+		if(user.getUserEmail().isBlank() || user.getUserPassword().isBlank()) {
+			/*
+			 * if(user.getUserEmail().isBlank()) {
+			 * model.addAttribute("msg","Enter the User Name");
+			 * 
+			 * }else if(user.getUserPassword().isBlank()) {
+			 * model.addAttribute("msg","Enter the Password");
+			 * 
+			 * }else { model.addAttribute("msg","Enter the User Name & Password");
+			 * 
+			 * } return "blank";
+			 */
+			return "redirect:/form";
+		}else {
+			int v = this.uService.createUser(user);
+			model.addAttribute("msg", "User Created and The ID is "+v);
+			
+			System.out.println(user);
+			return "success";
+			
+		}
 		
-		System.out.println(user);
-		return "success";
 		
 	}
 }
