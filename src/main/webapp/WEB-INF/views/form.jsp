@@ -11,21 +11,25 @@
 
     <title>Form</title>
   </head>
-  <body class="" style="background: blue">
-  	<div class="container t-4">
+  <body class="" style="background: skyblue">
+  	<div class="container mt-4 " >
   	
   		<div class="row">
-  			<div class="col-md-6 offset-md-4">
+  			<div class="col-md-6 offset-md-4 bg-light">
   				<div class="card-body" >
   					<h3 class="text-center"> Complex Form</h3>
-  					<form action="handle" >
+  					<form action="handleForm" method="post" >
+  						<div class="form-group">
+						  <label for="userName" >Name</label>
+						  <input type="text" class="form-control" id="userName"  name="userName" placeholder="Kishore">
+						</div>
 						<div class="form-group">
 						  <label for="userId" >UserId </label>
-						  <input type="text" class="form-control" id="userId" name="userId">
+						  <input type="number" class="form-control" id="userId" name="userId" placeholder="1234..">
 						</div>
 						<div class="form-group">
 						  <label for="dob" >DOB </label>
-						  <input type="date" class="form-control" id="dob" name="dob">
+						  <input type="text" class="form-control" id="dob"  name="dob" placeholder="dd/mm/yyyy">
 						</div>
 						<div class="form-group">
 						  <label for="userEmail" >Email address</label>
@@ -66,7 +70,7 @@
 							</select>
 						</div>
 						<div class="container text-center">
-								<button type="submit" >Sign Up</button>
+								<button type="submit" >Submit</button>
 						</div>
   					</form>
   				</div> 

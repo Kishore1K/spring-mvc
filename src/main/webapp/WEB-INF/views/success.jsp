@@ -15,6 +15,9 @@
 	  <h1>Email 	: ${user.userEmail }</h1>
 	  <h1>Password  : ${user.userPassword }</h1>
   </div>
+    <div class="contatiner  text-center" >  
+	  <h1>${student1}</h1>
+  </div>
 
 </body>
 </html>
