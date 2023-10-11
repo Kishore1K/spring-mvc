@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <html lang="en">
@@ -18,6 +19,10 @@
   			<div class="col-md-8 offset-md-3 bg-light">
   				<div class="card-body" >
   					<h3 class="text-center"> Complex Form</h3>
+  					<div class="alert alert-danger" role="alert">
+  						<form:errors path="student1.*" /> 
+  					
+  					</div>
   					<form action="handleForm" method="post" >
   						<div class="form-group">
 						  <label for="userName" >Name</label>

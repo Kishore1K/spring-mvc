@@ -2,6 +2,7 @@ package com.spring.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +21,11 @@ public class formController {
 	
 	
 	@RequestMapping(path = "/handleForm", method = RequestMethod.POST)
-	public String handelForm(@ModelAttribute("student1") student1  s1 ) {
+	public String handelForm(@ModelAttribute("student1") student1  s1, BindingResult bindingResult ) {
+		if(bindingResult.hasErrors()) {
+			System.out.println(bindingResult);
+			return "form";
+		}
 		System.out.println(s1);
 		return "success";
 	}
