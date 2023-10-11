@@ -28,8 +28,6 @@ public class HomeController {
 		friends.add("ani");
 		friends.add("Karthick");
 		model.addAttribute("friends", friends);
-		
-		
 		return "index";
 	}
 	
