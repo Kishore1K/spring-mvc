@@ -23,6 +23,8 @@ public class student1 {
 	
 	private String type;
 
+	
+	private Address address;
 	public String getUserName() {
 		return userName;
 	}
@@ -68,8 +70,8 @@ public class student1 {
 
 	@Override
 	public String toString() {
-		return "student1 [userName=" + userName + ", id=" + userId + ", dob=" + dob + ", courses=" + courses + ", email="
-				+ userEmail + ", gender=" + gender + ", type=" + type + "]";
+		return "student1 [userName=" + userName + ", userId=" + userId + ", dob=" + dob + ", courses=" + courses
+				+ ", userEmail=" + userEmail + ", gender=" + gender + ", type=" + type + ", address=" + address + "]";
 	}
 
 	public Long getUserId() {
@@ -86,6 +88,15 @@ public class student1 {
 
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		System.out.println("Address");
+		this.address = address;
 	}
 	
 	

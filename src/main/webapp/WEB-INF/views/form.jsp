@@ -15,7 +15,7 @@
   	<div class="container mt-4 " >
   	
   		<div class="row">
-  			<div class="col-md-6 offset-md-4 bg-light">
+  			<div class="col-md-8 offset-md-3 bg-light">
   				<div class="card-body" >
   					<h3 class="text-center"> Complex Form</h3>
   					<form action="handleForm" method="post" >
@@ -68,6 +68,24 @@
 								<option value="normalStudent">Normal Student</option>
 					
 							</select>
+						</div>
+						
+						<div class="card">
+							<div class="card-body">
+								<p class="text-center">Your Address</p>
+									<div class="form-group">
+									  <label for="street" >Street</label>
+									  <input type="text" class="form-control"  name="address.street" >
+									</div>
+									<div class="form-group">
+									  <label for="city" >City</label>
+									  <input type="text" class="form-control"   name="address.city" >
+									</div>
+									<div class="form-group">
+									  <label for="state" >State</label>
+									  <input type="text" class="form-control"   name="address.state" >
+									</div>
+							</div>
 						</div>
 						<div class="container text-center">
 								<button type="submit" >Submit</button>
