@@ -65,22 +65,21 @@ public class HomeController {
 		return modelAndView;
 	}
 	
-//	@ExceptionHandler({NullPointerException.class, NumberFormatException.class})
-	@ExceptionHandler(value = NullPointerException.class)
-	public String exceptionHandlerNULL(Model model) {
-		model.addAttribute("msg", "NullException");
-		return "blank";
-	}
-	
-	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
-	@ExceptionHandler(value = NumberFormatException.class)
-	public String exceptionHandlerN(Model model) {
-		model.addAttribute("msg", "Number Format");
-		return "blank";
-	}
-	
-	@ExceptionHandler(value =Exception.class)
-	public String genericEx(Model model) {
-		return "blank";
-	}
+	/*
+	 * // @ExceptionHandler({NullPointerException.class,
+	 * NumberFormatException.class})
+	 * 
+	 * @ExceptionHandler(value = NullPointerException.class) public String
+	 * exceptionHandlerNULL(Model model) { model.addAttribute("msg",
+	 * "NullException"); return "blank"; }
+	 * 
+	 * @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+	 * 
+	 * @ExceptionHandler(value = NumberFormatException.class) public String
+	 * exceptionHandlerN(Model model) { model.addAttribute("msg", "Number Format");
+	 * return "blank"; }
+	 * 
+	 * @ExceptionHandler(value =Exception.class) public String genericEx(Model
+	 * model) { return "blank"; }
+	 */
 }
