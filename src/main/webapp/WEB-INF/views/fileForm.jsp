@@ -1,6 +1,8 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
+<%@ page isELIgnored="false" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" %>
 <!doctype html>
 <html lang="en">
@@ -13,7 +15,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
 	<script src="<c:url value="./resources/js/script.js" />" ></script>
-    <title>Search Application</title>
+    <title>Upload Images</title>
   </head>
   <body>
     <div class="container">
@@ -21,14 +23,14 @@
     	<div class="card mx-auto mt-5 bg-primary" style="width:50%" >
     		
     		<div class="card-body" >
-    			<h1 class="text-center text-light ">My Search</h1>
-    			<form class="mt-5" action="submitSearch" >
+    			<h1 class="text-center text-light ">Upload Image</h1>
+    			<form class="mt-5" action="submitFile"  method="post"  enctype="multipart/form-data" >
     				<div class="form-group">
-    					<input type="text"  name="text" class="form-control" placeholder="Enter the KeyWord"/>
+    					<input type="file"  name="file" class="form-control-file" id="file"/>
     				
     				</div>
     				<div class="container text-center">
-    					  <button class="btn btn-outline-light">Search</button>
+    					  <button class="btn btn-outline-light">Upload</button>
     					
     				</div>
     			</form>
