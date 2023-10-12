@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -47,6 +48,18 @@ public class HomeController {
 		System.out.println("Hello "+ name + " "+ " phno"+ " "+ no);
 		Integer.parseInt(name);
 		return "home";
+	}
+	
+	@RequestMapping("/inter")
+	public String interceptionHandler() {
+		return "home1";
+	}
+	
+	@RequestMapping("/welcome")
+	public String welcome(@RequestParam("user") String name, Model m) {
+		System.out.println(name);
+		m.addAttribute("name", name);
+		return "welcome";
 	}
 	
 	@RequestMapping("/help")
